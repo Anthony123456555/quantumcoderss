@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 QuantumCoders — Astronaut Health & Mission Risk Monitoring System
 
-## Getting Started
+> **NASA Space Apps Challenge 2026**  
+> An advanced aerospace telemetry and physiological monitoring platform built for orbital missions, combining real time operational simulation with open source NASA research datasets.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛰️ Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**QuantumCoders** is an end-to-end spaceflight monitoring prototype designed to track, analyze and visualize astronaut health indicators in real time. By bridging operational telemetry streams with authentic spaceflight research from the **NASA Open Science Data Repository (OSDR)**, the platform enables flight surgeons and mission controllers to monitor cardiovascular stress, detect statistical anomalies and assess mission risk indices during deep space operations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack & Architecture
 
-## Learn More
+* **Frontend:** Next.js (React), TypeScript, Tailwind CSS, Recharts
+* **Backend:** Python 3.12, FastAPI, Uvicorn, Supabase Python SDK
+* **Database & Storage:** Supabase PostgreSQL
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Core Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Dual Data Channel Switching:**
+   * **Operational Telemetry:** Real time simulated astronaut telemetry channels (`DEMO-001`).
+   * **NASA OSDR Research Data:** Connected directly to public spaceflight research datasets (`OSDR-SUBJ-01`) to benchmark microgravity cardiovascular impact.
+2. **Live Telemetry Streaming:** Simulated live sensor injection pipeline (`/api/v1/health/stream`) that streams real time biometric updates directly into Supabase.
+3. **Explainable Anomaly Detection Engine:** Automated backend baseline analysis that flags cardiovascular strain and calculates dynamic Mission Risk Indices (`NOMINAL`, `CAUTION`, `ELEVATED`).
+4. **Mission Report Export:** Instant generation and download of official secure mission telemetry logs (`.txt`) for archival and debriefing.
+5. **Flight Comms Intelligence Terminal:** An interactive CLI chat interface allowing operators to query mission status, anomaly states and database logs in real time.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+quantumcoders/
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   └── ingest_nasa.py
+│   ├── requirements.txt
+│   └── .env 
+└── src/
+    └── app/
+        └── page.tsx
